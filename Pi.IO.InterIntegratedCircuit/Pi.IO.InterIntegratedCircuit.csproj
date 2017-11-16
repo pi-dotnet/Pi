@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageVersion>0.0.2-preview1</PackageVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pi.IO.GeneralPurpose\Pi.IO.GeneralPurpose.csproj" />
+    <ProjectReference Include="..\Pi.System\Pi.System.csproj" />
+  </ItemGroup>
+
+</Project>

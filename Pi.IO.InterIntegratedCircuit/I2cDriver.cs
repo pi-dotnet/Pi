@@ -376,7 +376,7 @@ namespace Pi.IO.InterIntegratedCircuit
                     throw new InvalidOperationException("No I2C device exist on the specified pins");
 
                 default:
-                    throw new NotSupportedException(string.Format(CultureInfo.InvariantCulture, "Connector pinout {0} is not supported", GpioConnectionSettings.ConnectorPinout));
+                    throw new NotSupportedException(string.Format(CultureInfo.InvariantCulture, "Connector pintout {0} is not supported", GpioConnectionSettings.ConnectorPinout));
             }
         }
 

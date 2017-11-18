@@ -62,7 +62,14 @@ namespace Pi.IO.InterIntegratedCircuit
         /// <param name="buffer">The buffer.</param>
         public void Write(params byte[] buffer)
         {
-            Execute(new I2cTransaction(new I2cWriteAction(buffer)));
+            try
+            {
+                Execute(new I2cTransaction(new I2cWriteAction(buffer)));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Execute error {0}", e.Message);
+            }
         }
 
         /// <summary>
@@ -71,7 +78,14 @@ namespace Pi.IO.InterIntegratedCircuit
         /// <param name="value">The value.</param>
         public void WriteByte(byte value)
         {
-            Execute(new I2cTransaction(new I2cWriteAction(value)));
+            try
+            {
+                Execute(new I2cTransaction(new I2cWriteAction(value)));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Execute error WriteByte {0}", e.Message);
+            }
         }
 
         /// <summary>
